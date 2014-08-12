@@ -1,0 +1,9 @@
+{{logrotate_logfile}} {
+        daily
+        missingok
+        rotate 14
+        compress
+        delaycompress
+        notifempty
+        create 600 {{logroate_user}} {{logrotate_group}}
+}

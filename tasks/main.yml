@@ -1,0 +1,6 @@
+---
+- name: Install logrotate package
+  apt: name=logrotate state=present
+
+- name: Create lograte configuration file
+  template: src=log.conf.j2 dest=/etc/logrotate.d/{{logrotate_name}}
