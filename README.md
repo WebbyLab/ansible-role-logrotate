@@ -8,7 +8,7 @@ Rotation configuration:
     {{logrotate_logfile}} {
         daily
         missingok
-        rotate 14
+        rotate {{logrotate_rotate}}
         compress
         delaycompress
         notifempty
@@ -22,6 +22,7 @@ Role Variables
     logrotate_logfile: /home/web-app/web-app/logs/debug.log
     logrotate_user: ubuntu
     logrotate_group: ubuntu
+    logrotate_rotate: 14
 
 
 Example Playbook
@@ -34,6 +35,7 @@ Example Playbook
            logrotate_logfile: /home/web-app/web-app/logs/debug.log
            logrotate_user: ubuntu
            logrotate_group: ubuntu
+           logrotate_rotate: 14
 
 License
 -------
